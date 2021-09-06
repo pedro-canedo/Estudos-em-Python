@@ -6,10 +6,10 @@ def leiaInt(msg):
         try:
             n = int(input((msg)))
         except (ValueError, TypeError):
-            print('\n\033[31mUsuário preferiu não digitar um número inteiro. \033[m')
+            print('\n\033Usuário preferiu não digitar um número inteiro. \033')
             continue
         except (KeyboardInterrupt):
-            print('\n\033[31mUsuário preferiu não digitar este número. \033[m')
+            print('\n\033Usuário preferiu não digitar este número. \033')
             return 0
         else:
             return n
@@ -29,10 +29,10 @@ def menu(lista):
     cabeçalho('Menu Principal')
     c = 1
     for item in lista:
-        print(f'\033[33m{c}\033[33m - \033[34m{item}\033[31m')
+        print(f'\033{c}\033\033{item}\033')
         c += 1
     print(linha())
-    opc = leiaInt('\033[37mSua Opção:\033[37m ')
+    opc = leiaInt('\033Sua Opção:\033 ')
     return opc
 
 
@@ -65,7 +65,7 @@ def lerArquivo(nome):
     except:
         print('Erro ao ler o arquivo!')
     else:
-        cabeçalho('PESSOAS CADASRADAS')
+        cabeçalho('PESSOAS CADASTRADAS')
         for linha in a:
             dado = linha.split(';')
             dado[1] = dado[1].replace('\n', '')

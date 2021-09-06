@@ -1,3 +1,5 @@
 Pedro;25
 João;32
 José;40
+Pedro;25
+Maria;32
